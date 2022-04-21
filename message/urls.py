@@ -18,7 +18,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    # path('contact-submit', views.submit_contact, name='contact-submit'),
+    path('contact-submit', views.submit_contact, name='contact-submit'),
 
 
 ]

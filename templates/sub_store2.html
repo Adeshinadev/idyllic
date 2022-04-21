@@ -68,7 +68,7 @@
       <ul class="nav navbar-nav navbar-right" >
         <li><a href="{% url 'contact-us' %}" style="color:white;">Contact Us</a></li>
           <li><a href="{% url 'home' %}" style="color:white;">About Us</a></li>
-          <li><a href="{% url 'home' %}" style="color:white;">Services</a></li>
+         
       </ul>
     </div>
   </div>
@@ -451,7 +451,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                                 <!-- blog_pagination_section start -->
-                                {% if products %}
+                                {% comment %} {% if products %}
                                 <div class="pager_wrapper gc_blog_pagination">
                                     <ul class="pagination">
                                         <li><a href="#">Previous</a>
@@ -468,7 +468,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                {% endif %}
+                                {% endif %} {% endcomment %}
                                 <!-- blog_pagination_section end -->
                             </div>
                         </div>

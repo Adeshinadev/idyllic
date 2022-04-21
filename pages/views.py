@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from product.models import Categorie, Product, Sub_categorie
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from product.models import Product
 # Create your views here.
 
 def home(request):
-    return render(request, 'error.html')
-
+    # return render(request, 'error.html')
+    categories = Categorie.objects.all()
+    return render(request, 'index.html', {'categories': categories})
 
 def contact_us(request):
     return render(request, 'contact_us.html')

@@ -21,6 +21,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('product', include('product.urls')),
     path('message', include('message.urls')),
+    path('blog', include('blog.urls')),
 ]
 
 handler404 = 'pages.views.handle_not_found'

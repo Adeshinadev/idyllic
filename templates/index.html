@@ -57,9 +57,15 @@
     <div class="collapse navbar-collapse" id="myNavbar">
 
       <ul class="nav navbar-nav navbar-right" >
-        <li><a href="{% url 'contact-us' %}" style="color:white;">Contact Us</a></li>
-          <li><a href="#about" style="color:white;">About Us</a></li>
-          <li><a href="#Products" style="color:white;">Products</a></li>
+        <li><a href="shop_sidebar.html" title="" style="color:white;">Products</a>
+            <ul>
+                {% for category in categories %}
+                <li class="dropdown_hover"><a href="{% url 'store' id=category.id %}" title="">{{category.name}}</a></li>
+               {% endfor %}
+            </ul>
+        </li>
+        <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
+          <li><a href="#Products" style="color:white;">Contact Us</a></li>
       </ul>
     </div>
   </div>
@@ -766,7 +772,7 @@ Solar-Panels
 
                             </div>
                             <div class="abotus_content">
-                                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aks nostrud exercitation ullamco.</p>
+                                
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -787,16 +793,16 @@ Solar-Panels
                                 </li>
                                 <li><a href="#"><i class="fa fa-angle-right"></i>events </a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>contact </a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>history</a>
+                                <li><a href="{% url 'contact-us' %}"><i class="fa fa-angle-right"></i>contact </a>
                                 </li>
                                 <li><a href="#"><i class="fa fa-angle-right"></i>news</a> </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
+                                </li>
                             </ul>
 
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
+                    <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4" style="visibility:hidden;">
                         <div class="wrapper_second_useful wrapper_second_links">
 
                             <ul>

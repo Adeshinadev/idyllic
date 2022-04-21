@@ -1,0 +1,274 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+    
+<head>
+        
+        
+        <meta charset="utf-8" />
+        <title>idyllic | {{post.title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content=" " />
+        <meta name="keywords" content="" />
+        <meta content="Themesdesign" name="author" />
+
+        <link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+
+        <!-- Swiper Css -->
+        <link rel="stylesheet" href="{% static 'assets/libs/swiper/swiper-bundle.min.css' %}">
+
+        <!-- Bootstrap Css -->
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{% static 'assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static 'assets/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+        <!--Custom Css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+
+    <body>
+         <!--start page Loader -->
+         {% comment %} <div id="preloader">
+            <div id="status">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+            </div>
+        </div> {% endcomment %}
+        <!--end page Loader -->
+
+        <!-- Begin page -->
+        <div>
+
+            <nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar" style="margin-top:0px; width:100%; background-color:#1c144e;">
+                <div class="container-fluid custom-container">
+                    <a class="navbar-brand text-dark fw-bold me-auto" href="/">
+
+ <span style="color:#ffff; font-size:24px; ">IDYLLIC</span>
+                    </a>
+                    <div>
+                        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+                            <i class="fa fa-bars" style="font-size:19px; color:white;"></i>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mx-auto navbar-center">
+                            <li class="nav-item dropdown dropdown-hover">
+                                <a class="nav-link" href="/" id="homedrop" role="button" style="color:white;">
+                                    Home
+                                </a>
+
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover">
+                                <a class="nav-link" href="javascript:void(0)" style="color:white" id="homedrop" role="button" data-bs-toggle="dropdown">
+                                    Products 
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="homedrop">
+                                    {% for category in categories %}
+                                    <li><a class="dropdown-item" href="index.html">{{category.name}}</a></li>
+                                   
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <!--end dropdown-->
+
+
+
+                        </ul><!--end navbar-nav-->
+                    </div>
+                    <!--end navabar-collapse-->
+                     <ul class="header-menu list-inline d-flex align-items-center mb-0">
+
+
+
+                    </ul><!--end header-menu-->
+                </div>
+                <!--end container-->
+            </nav> 
+            <!-- Navbar End -->
+
+            <div class="main-content">
+
+                <div class="page-content">
+
+
+                    <div class="position-relative" >
+                        <div class="shape">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+                                <path fill="#FFFFFF" fill-opacity="1"
+                                    d="M0,192L120,202.7C240,213,480,235,720,234.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- END SHAPE -->
+
+
+                    <!-- START BLOG-DETAILS -->
+                    <section class="section">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7">
+                                    <div class="text-center mb-5" style="margin-top:20px;">
+<!--                                        <p class="text-danger fw-semibold mb-10">Fashion</p>-->
+                                        <h3>{{post.title}}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div >
+                                <div >
+                                    <div class="blog-post">
+
+
+
+
+                                                   <center> <img src="{{post.image.url}}" alt="" class="img-fluid rounded-3">
+</center>
+
+                                        <ul class="list-inline mb-0 mt-3 text-muted">
+                                            <li class="list-inline-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="{% static 'assets/images/profile.png' %}" alt="" class="avatar-sm rounded-circle">
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <a href="blog-author.html" class="primary-link"><h6 class="mb-0">By admin</h6></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <i class="uil uil-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="ms-2">
+                                                        <p class="mb-0">{{post.created_on}}</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <div class="mt-4">
+<!--                                            <h5>What makes the best co-working space?</h5>-->
+                                            <p class="text-muted">{{post.content|safe}}</p>
+
+                                            <div class="d-flex align-items-center mb-4">
+
+                                            </div>
+
+                                            
+                                        </div>
+
+                                    </div>
+                                </div><!--end col-->
+
+
+                                <!--end col-->
+                            </div><!--end row-->
+                        </div><!--end container-->
+                    </section>
+                    <!-- START BLOG-DETAILS -->
+
+                </div>
+                <!-- End Page-content -->
+
+                <!-- START SUBSCRIBE -->
+                <section class="bg-subscribe" style="background-color:#5e2ced;">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6" >
+                                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                                    <div class="section3_copyright">
+                                        <p style="color:#fff;">Copyright 2022 <a href="" style="color:#fcf05a;"> idyllic technologies</a>. all right reserved - design by <a href="" style="color:#fcf05a;">Tekbyte. </a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </div>
+                    <!--end container-->
+                    <div class="email-img d-none d-lg-block">
+                        <img src="{% static 'assets/images/subscribe.png' %}" alt="" class="img-fluid">
+                    </div>
+                </section>
+
+                <div id="style-switcher" onclick="toggleSwitcher()" style="left: -165px;" hidden>
+                    <div>
+                        <h6>Select your color</h6>
+                        <ul class="pattern list-unstyled mb-0">
+                            <li>
+                                <a class="color-list color1" href="javascript: void(0);" onclick="setColorGreen()"></a>
+                            </li>
+                            <li>
+                                <a class="color-list color2" href="javascript: void(0);" onclick="setColor('blue')"></a>
+                            </li>
+                            <li>
+                                <a class="color-list color3" href="javascript: void(0);" onclick="setColor('green')"></a>
+                            </li>
+                        </ul>
+                        <div class="mt-3" >
+                            <h6>Light/dark Layout</h6>
+                            <div class="text-center mt-3">
+                                <!-- light-dark mode -->
+                                <a href="javascript: void(0);" id="mode" class="mode-btn text-white rounded-3">
+                                    <i class="uil uil-brightness mode-dark mx-auto"></i>
+                                    <i class="uil uil-moon mode-light"></i>
+                                </a>
+                                <!-- END light-dark Mode -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom d-none d-md-block">
+                        <a href="javascript: void(0);" class="settings rounded-end"><i class="mdi mdi-cog mdi-spin"></i></a>
+                    </div>
+                </div>
+                <!-- end switcher-->
+
+                <!--start back-to-top-->
+                <button onclick="topFunction()" id="back-to-top">
+                    <i class="fa fa-angle-double-up" style="font-size:24px"></i>
+                </button>
+                <!--end back-to-top-->
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '../../../unicons.iconscout.com/release/v4.0.0/script/monochrome/bundle.js' %}"></script>
+
+
+        <!-- Choice Js -->
+        <script src="{% static 'assets/libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+
+        <!-- Swiper Js -->
+        <script src="{% static 'assets/libs/swiper/swiper-bundle.min.js' %}"></script>
+
+        <!-- Blog Init Js -->
+        <script src="{% static 'assets/js/pages/blog-details.init.js' %}"></script>
+
+        <!-- Switcher Js -->
+        <script src="{% static 'assets/js/pages/switcher.init.js' %}"></script>
+
+        <!-- App Js -->
+        <script src="{% static 'assets/js/app.js' %}"></script>
+
+    </body>
+
+
+</html>
