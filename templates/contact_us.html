@@ -1,0 +1,274 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx">
+<!--[endif]-->
+
+
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Contact Us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="smart pest" />
+    <meta name="keywords" content="solar system /sun & wind" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/meanmenu.css ' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slicknav.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'venobox/css/venobox.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/camera.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive_2.css' %}" />
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="{% static 'images/globe.jpg' %}' %}" />
+</head>
+
+<body>
+
+ <div class="transparent-menu" style="background-color:#1c144e;">
+<nav class="navbar navbar-inverse" style="width:100%; background:none; border:none; background-color:#1c144e;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+         <a href="{% url 'home' %}"><img src="{% static 'images/214.png' %}" class="img-responsive" alt="logo" /></a>
+<!--      <h1><a class="navbar-brand" href="#" style="font-size:30px; color:#ffff;"><b>IDYLLIC</b></a></h1>-->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right" >
+          <li><a href="{% url 'home' %}" style="color:white;">About Us</a></li>
+          <li><a href="{% url 'home' %}" style="color:white;">Products</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    </div>
+
+    <div class="contact-section">
+        <div class="container">
+            <div class="holder">
+                <div class=" row">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <form method='post' action="{% url 'contact-submit' %}" >
+                            {% csrf_token %}
+                            <div class="sw_left_heading_wraper">
+                                <h1>Fill Free Contact Us</h1>
+                                <img src="{% static 'images/heading_line.png' %}" alt="title">
+                                {% for message in messages %}
+                                    <div class="alert alert-success">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                                <p></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Name*" class="require">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" autocomplete="false" name="email" placeholder="Email*" class="require" data-valid="email" data-error="Email should be valid.">
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" name="subject" placeholder="subject (optional)">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea cols="10" rows="4" name="message" class="require" placeholder="Message*"></textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="response response_2"></div>
+                                    <div class="cntct_2_btn_wrapper cntct_2_btn_inner">
+                                        <button type="submit" class="submitForm waves-effect waves-light waves-ripple">send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="contact-box">
+                            <div class="wrapper_second_useful_2">
+                                <div class="sw_left_heading_wraper sw_dark_heading_wraper ppp">
+                                    <h1>contact info</h1>
+                                    <img src="{% static 'images/hd_line_dark.png' %}" alt="title">
+                                    <p>Donec quis amet risus vulputate maximus eget eget arcu.</p>
+                                </div>
+                               <ul>
+									<li>
+                                     <h1>+234 7003 8935</h1></li>
+									 <li><a href="#"><i class="flaticon-new-email-outline"></i>sales@idyllictechnologies.com</a>
+                                    </li>
+									 <li><i class="flaticon-placeholder"></i>7, Kudirat Abiola Way, Oregun Opposite Total Filling Station, Near Ojota Bus Stop
+                                </li>
+
+                                <li><i class="flaticon-placeholder"></i>2, Ogungbeye Street, Olowora Off Omole Phase 2, Lagos State.</li>
+                                                                    
+                                </ul>
+                            </div>
+                            <div class="abotus_content">
+
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li class="hidden-xs"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact wrapper end-->
+
+    <!-- sw footer section start-->
+    <div class="sw_footer_main_wrapper">
+
+        <div class="circle_btm">
+            <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
+        </div>
+        <div class="footer_wrapper">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="foter_padder">
+                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                            <div class="wrapper_second_about">
+                                <div class="wrapper_first_image">
+                                    <a href="{% url 'home' %}"><img src="{% static 'images/214.png' %}" class="img-responsive" alt="logo" /></a>
+                                </div>
+                                <div class="abotus_content">
+                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aks nostrud exercitation ullamco.</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
+                            <div class="wrapper_second_useful">
+                                <h4>useful links </h4>
+                                <img src="{% static 'images/hd_line_dark.png' %}" alt="title" class="pd_btm_3">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>About us</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>events </a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>contact </a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>history</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>news</a> </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
+                            <div class="wrapper_second_useful wrapper_second_links">
+
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>sitemap</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>awards </a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>tstimonials</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>career</a> </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                        <div class="wrapper_second_useful wrapper_second_useful_2">
+                            <h4>contact  us</h4>
+                            <img src="{% static 'images/heading_line3.png' %}" alt="title" class="pd_btm_3">
+                            <ul>
+                                <li>
+                                    <h1>+234 7003 8935</h1></li>
+                                <li><a href="#"><i class="flaticon-new-email-outline"></i>sales@idyllictechnologies.com</a>
+                                </li>
+<!--                                <li><a href="#"><i class="flaticon-internet"> www.idyllictechnologies.com</i></a>-->
+<!--                                </li>-->
+
+                                <li><i class="flaticon-placeholder"></i>7, Kudirat Abiola Way, Oregun Opposite Total Filling Station, Near Ojota Bus Stop
+                                </li>
+
+                                <li><i class="flaticon-placeholder"></i>2, Ogungbeye Street, Olowora Off Omole Phase 2, Lagos State.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="section3_copyright">
+                        <p>Copyright 2022 <a href="index.html"> idyllic technologies</a>. all right reserved - design by <a href="">Tekbyte. </a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- sw footer section end-->
+    <!--main js files-->
+
+    <script src="{% static 'js/jquery_min.js"></script>
+    <script src="{% static 'js/materialize.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js"></script>
+    <script src="{% static 'js/jqu_menu.js"></script>
+    <script src="{% static 'js/jqu_slickmenu.js"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js"></script>
+    <script src="{% static 'venobox/js/venobox.min.js"></script>
+    <script src="{% static 'js/jquery.inview.min.js"></script>
+    <script src="{% static 'js/jquery.mixitup.min.js"></script>
+    <script src="{% static 'js/jquery.countTo.js"></script>
+    <script src="{% static 'js/wow.min.js"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js"></script>
+    <script src="{% static 'js/owl.carousel.js"></script>
+    <script src="{% static 'js/camera.min.js"></script>
+    <script src="{% static 'js/custom_2.js"></script>
+    <!--main js file end-->
+
+
+</body>
+
+
+</html>
