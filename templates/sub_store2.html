@@ -66,9 +66,13 @@
     <div class="collapse navbar-collapse" id="myNavbar">
 
       <ul class="nav navbar-nav navbar-right" >
-        <li><a href="{% url 'contact-us' %}" style="color:white;">Contact Us</a></li>
-          <li><a href="{% url 'home' %}" style="color:white;">About Us</a></li>
-          <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
+        <li><a href="{% url 'home' %}" title="" style="color:white;">Home</a>
+
+        </li>
+          <li><a href="{% url 'about' %}" style="color:white;">About</a></li>
+        <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
+          <li><a href="{% url 'contact' %}" style="color:white;">Contact</a></li>
+
       </ul>
     </div>
   </div>
@@ -650,14 +654,13 @@ track for what.</a></h5>
                                 <h4>useful links </h4>
                                 <img src="{% static 'images/hd_line_dark.png' %}" alt="title" class="pd_btm_3">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>About us</a>
+                                    <li><a href="{% url 'about' %}"><i class="fa fa-angle-right"></i>About</a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>events </a>
-                                    </li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>contact </a>
+
+                                    <li><a href="{% url 'contact' %}"><i class="fa fa-angle-right"></i>contact </a>
                                     </li>
                                    
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>news</a> </li>
+                                    <li><a href="{% url 'postList' %}"><i class="fa fa-angle-right"></i>news</a> </li>
                                 </ul>
 
                             </div>

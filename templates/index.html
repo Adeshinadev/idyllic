@@ -57,6 +57,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
 
       <ul class="nav navbar-nav navbar-right" >
+           <li><a href="{% url 'about' %}" style="color:white;">About</a></li>
         <li><a href=" " title="" style="color:white;">Products</a>
             <ul>
                 {% for category in categories %}
@@ -65,7 +66,8 @@
             </ul>
         </li>
         <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
-          <li><a href="#Products" style="color:white;">Contact Us</a></li>
+          <li><a href="{% url 'contact' %}" style="color:white;">Contact</a></li>
+
       </ul>
     </div>
   </div>
@@ -371,7 +373,7 @@ your carbon footprint, take control of your power costs.</p>
                 <div class="header_btn ltr_btn">
                     <ul>
                         <li>
-                            <a href="{% url 'contact-us' %}" class="waves-effect waves-purple waves-ripple">Contact</a>
+                            <a href="{% url 'contact' %}" class="waves-effect waves-purple waves-ripple">Contact</a>
                         </li>
                     </ul>
 
@@ -387,7 +389,7 @@ your carbon footprint, take control of your power costs.</p>
         <div class="container" >
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
-                    <div class="sw_left_heading_wraper sw_center_heading_wrapper">
+                    <div class="sw_left_heading_wraper sw_center_heading_wrapper" >
                         <h1>Our Products</h1>
                         <img src="{% static 'images/heading_line2.png' %}" alt="title">
                     </div>
@@ -424,15 +426,15 @@ Solar-Panels
 
                         <div class="grid galler_2_btm_section">
 
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 grid-item rresentation branding * project_pdr_btm">
-                                <div class="gallery-list img-effect zoom-slow">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 grid-item rresentation branding * project_pdr_btm" >
+                                <div class="gallery-list img-effect zoom-slow" >
                                     <div class="sp_img_box_overlay sp_img_index_overlay"></div>
-                                    <div class="over">
+                                    <div class="over" >
 
-                                        <img src="{% static 'images/pj_1.jpg' %}" alt="" class="img-responsive" />
+                                        <img src="{% static 'images/pj_1.jpg' %}" alt="" class="img-responsive" style="border:1px solid #5e2ced; height:250px; border-radius:10px;" />
 
                                         <div class="tab_img_overlay tab_img_overlay_2 tab_img_overlay_3">
-                                            <a href="images/pj_1.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
+                                            <a href="{% static 'images/pj_1.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
                                                 <i class="fa fa-arrows-alt"></i> </a>
                                             <h1>solar panels</h1>
 
@@ -447,10 +449,10 @@ Solar-Panels
                                     <div class="sp_img_box_overlay sp_img_index_overlay"></div>
                                     <div class="over">
 
-                                        <img src="{% static 'images/1.jpg' %}" alt="" class="img-responsive" />
+                                        <img src="{% static 'images/1.jpg' %}" alt="" class="img-responsive" style="border:1px solid #5e2ced; height:250px; border-radius:10px;"/>
                                         <div class="tab_img_overlay tab_img_overlay_2 tab_img_overlay_3">
 
-                                            <a href="{% static 'images/pj_4.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
+                                            <a href="{% static 'images/1.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
                                                 <i class="fa fa-arrows-alt"></i> </a>
                                             <h1>Inverter</h1>
 
@@ -464,10 +466,10 @@ Solar-Panels
                                     <div class="sp_img_box_overlay sp_img_index_overlay"></div>
                                     <div class="over">
 
-                                        <img src="{% static 'images/2.png' %}" alt="" class="img-responsive" />
+                                        <img src="{% static 'images/2.png' %}" alt="" class="img-responsive" style="border:1px solid #5e2ced; height:250px; border-radius:10px;" />
                                         <div class="tab_img_overlay tab_img_overlay_2 tab_img_overlay_3">
 
-                                            <a href="images/pj_6.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
+                                            <a href="{% static 'images/2.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
                                                 <i class="fa fa-arrows-alt"></i> </a>
                                             <h1>UPS</h1>
 
@@ -482,10 +484,10 @@ Solar-Panels
                                     <div class="sp_img_box_overlay sp_img_index_overlay"></div>
                                     <div class="over">
 
-                                        <img src="{% static 'images/3.jpg' %}" alt="" class="img-responsive" />
+                                        <img src="{% static 'images/3.jpg' %}" alt="" class="img-responsive" style="border:1px solid #5e2ced; height:250px; border-radius:10px;" />
                                         <div class="tab_img_overlay tab_img_overlay_2 tab_img_overlay_3">
 
-                                            <a href="images/pj_11.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
+                                            <a href="{% static 'images/3.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
                                                 <i class="fa fa-arrows-alt"></i> </a>
                                             <h1>Stabilizer</h1>
 
@@ -501,10 +503,10 @@ Solar-Panels
                                     <div class="sp_img_box_overlay sp_img_index_overlay"></div>
                                     <div class="over">
 
-                                        <img src="{% static 'images/5.jpg' %}" alt="" class="img-responsive" />
+                                        <img src="{% static 'images/5.jpg' %}" alt="" class="img-responsive" style="border:1px solid #5e2ced; height:250px; border-radius:10px;" />
                                         <div class="tab_img_overlay tab_img_overlay_2 tab_img_overlay_3">
 
-                                            <a href="{% static 'images/pj_9.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
+                                            <a href="{% static 'images/5.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
                                                 <i class="fa fa-arrows-alt"></i> </a>
                                             <h1>Batteries</h1>
 <!--                                            <p>(solar pannels)</p>-->
@@ -519,10 +521,10 @@ Solar-Panels
                                     <div class="sp_img_box_overlay sp_img_index_overlay"></div>
                                     <div class="over">
 
-                                        <img src="{% static 'images/pj_10.png' %}" alt="" class="img-responsive" />
+                                        <img src="{% static 'images/pj_10.png' %}" alt="" class="img-responsive" style="border:1px solid #5e2ced; height:250px; border-radius:10px;" />
                                         <div class="tab_img_overlay tab_img_overlay_2 tab_img_overlay_3">
 
-                                            <a href="images/pj_10.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
+                                            <a href="{% static 'images/pj_10.jpg' %}" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
                                                 <i class="fa fa-arrows-alt"></i> </a>
                                             <h1>Others</h1>
 
@@ -705,54 +707,62 @@ Solar-Panels
     </div>
 
 
-<!--    <div class="sw_partners_wrapper">-->
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">-->
-<!--                    <div class="sw_left_heading_wraper">-->
-<!--                        <h1>Our Partners</h1>-->
-<!--                        <img src="images/heading_line2.png" alt="title">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">-->
-<!--                    <div class="partners_slider_wrapper">-->
-<!--                        <div class="owl-carousel owl-theme">-->
-<!--                            <div class="item">-->
-<!--                                <div class="lr_prt_img_wrapper">-->
-<!--                                    <img src="images/1.png" alt="partner_img">-->
-<!--                                </div>-->
+
+<div class="counter_section">
+        <div class="counter-section section-padding" data-stellar-background-ratio="0.5">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-2.3 col-md-3 col-sm-6 col-xs-12 wow  zoomIn animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: zoomIn;">
+                        <div class="counter_hover">
+                            <div class="icon"> <a href="#"><img src="{% static 'images/part1.jpeg' %}" width="150px" height="70px"> </a>
+                            </div>
+<!--                            <div class="count-description">-->
+<!--                                <h5 class="con1">project complete</h5>-->
+<!--                                <span class="timer">1353</span>-->
+
 <!--                            </div>-->
-<!--                            <div class="item">-->
-<!--                                <div class="lr_prt_img_wrapper">-->
-<!--                                    <img src="images/partner_2.png" alt="partner_img">-->
-<!--                                </div>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 wow  zoomIn animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: zoomIn;">
+                        <div class="counter_hover">
+                           <div class="icon"> <a href="#"><img src="{% static 'images/part2.png' %}" width="150px" height="70px"> </a>
+                            </div>
+
+                        </div>
+                    </div>
+                      <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 wow  zoomIn animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: zoomIn;">
+                        <div class="counter_hover">
+                           <div class="icon"> <a href="#"><img src="{% static 'images/part3.png' %}" width="150px" height="70px"> </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 wow  zoomIn animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: zoomIn;">
+                        <div class="counter_hover">
+                           <div class="icon"> <a href="#"><img src="{% static 'images/part4.png' %}" width="150px" height="70px"> </a>
+                            </div>
+<!--                            <div class="count-description">-->
+<!--                                <h5 class="con2">awards winner</h5>-->
+<!--                                <span class="timer">845</span>+-->
+
 <!--                            </div>-->
-<!--                            <div class="item">-->
-<!--                                <div class="lr_prt_img_wrapper">-->
-<!--                                    <img src="images/partner_3.png" alt="partner_img">-->
-<!--                                </div>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-2.3 col-md-3 col-sm-6 col-xs-12 wow  zoomIn animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: zoomIn;">
+                        <div class="counter_hover">
+                          <div class="icon"> <a href="#"><img src="{% static 'images/part5.png' %}" width="150px" height="70px;"> </a>
+                            </div>
+<!--                            <div class="count-description">-->
+<!--                                <h5 class="con4">years in service</h5>-->
+<!--                                <span class="timer">27</span>+-->
+
 <!--                            </div>-->
-<!--                            <div class="item">-->
-<!--                                <div class="lr_prt_img_wrapper">-->
-<!--                                    <img src="images/partner_4.png" alt="partner_img">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="item">-->
-<!--                                <div class="lr_prt_img_wrapper">-->
-<!--                                    <img src="images/partner_5.png" alt="partner_img">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="item">-->
-<!--                                <div class="lr_prt_img_wrapper">-->
-<!--                                    <img src="images/partner_2.png" alt="partner_img">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- sw partners section end-->
     <!-- sw footer section start-->
     <div class="footer_wrapper">
@@ -789,13 +799,13 @@ Solar-Panels
                             <h4>useful links </h4>
                             <img src="{% static 'images/heading_line3.png' %}" alt="title" class="pd_btm_3">
                             <ul>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>About us</a>
+                                <li><a href="{% url 'about' %}"><i class="fa fa-angle-right"></i>About us</a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>events </a>
+<!--                                <li><a href="#"><i class="fa fa-angle-right"></i>events </a>-->
+<!--                                </li>-->
+                                <li><a href="{% url 'contact' %}"><i class="fa fa-angle-right"></i>contact </a>
                                 </li>
-                                <li><a href="{% url 'contact-us' %}"><i class="fa fa-angle-right"></i>contact </a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i>news</a> </li>
+                                <li><a href="{% url 'postList' %}"><i class="fa fa-angle-right"></i>news</a> </li>
                                 <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
                                 </li>
                             </ul>

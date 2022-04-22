@@ -1,0 +1,488 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+Project:  Typhoon - Solar Energy HTML Template
+Version:  1.0.0
+Author:   Webstrot
+
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx">
+<!--[endif]-->
+
+
+<!-- Mirrored from webstrot.com/html/typhoon/typhoon_html/about_us.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2022 18:01:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>About Us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="smart pest" />
+    <meta name="keywords" content="solar system /sun & wind" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/meanmenu.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slicknav.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'venobox/css/venobox.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/camera.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive_2.css' %}" />
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
+
+
+<body>
+    <!-- preloader Start -->
+
+    <!--sw header wrapper start-->
+
+    <div class="transparent-menu header-area hidden-menu-bar stick">
+
+      <nav class="navbar navbar-inverse" style="width:100%; background:none; border:none; background-color:#1c144e;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+         <a href="{% url 'home' %}"><img src="{% static 'images/214.png' %}" class="img-responsive" alt="logo" /></a>
+<!--      <h1><a class="navbar-brand" href="#" style="font-size:30px; color:#ffff;"><b>IDYLLIC</b></a></h1>-->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right" >
+        <li><a href=" " title="" style="color:white;">Products</a>
+            <ul>
+                {% for category in categories %}
+                <li class="dropdown_hover"><a href="{% url 'store' id=category.id %}" title="">{{category.name}}</a></li>
+               {% endfor %}
+            </ul>
+        </li>
+        <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
+          <li><a href="#Products" style="color:white;">Contact</a></li>
+          <li><a href="{% url 'about' %}" style="color:white;">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    </div>
+    <!--sw header wrapper end-->
+    <!-- page_title_section start -->
+    <div class="page_title_section">
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li><a href="#"> Home </a></li>
+                                <li> about us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page_title_section end -->
+    <!--sw about us top start-->
+    <div class="sw_about_top_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_abot_top_txt_wrapper">
+
+                        <div class="sw_left_heading_wraper sw_dark_heading_wraper">
+                            <h1>Our Company Overview</h1>
+                            <img src="{% static 'images/hd_line_dark.png' %}" alt="title">
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_about_top_img">
+                        <img src="{% static 'images/iner_abt.png' %}" alt="img">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top end-->
+    <!--sw about us top start-->
+    <div class="sw_abt_btm_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_road_leads_img">
+                        <img src="{% static 'images/leads.gif' %}" alt="img">
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_left_heading_wraper sw_abt_tp_txt">
+                        <h1>Want to Know About Us?</h1>
+                        <img src="{% static 'images/heading_line.png' %}" alt="title">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis rud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis ate irure dolor in reprehenderit in luptate velit esse cillum dolore eu fugiat nulla atur. Excepteur sint caecat cupidatat non laboris nisi ut aliquip ex ea commodo cons fugiat nulla atur. Excepteur sint caecat cupidatat non proiden. Ut enim ad minim veniam, quirud exercitation ullam proiden. Ut enim ad minim veniam, quirud exercitation ullamco laboris nisi ut aliquip ex.
+                        </p>
+                        <br>
+                        <p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis rud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons fugiat nulla atur. Excepteur sint caecat cupidatat non proiden. Ut enim ad minim veniam, quirud exercitation ullam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top end-->
+    <!--sw spectrum wrapper start-->
+
+    <!--sw spectrum wrapper end-->
+    <!--sw leads wrapper start-->
+    <div class="sw_leads_wrapper">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_disc_txt_wrapper">
+
+                        <div class="sw_left_heading_wraper">
+                            <h1>Idyllic's core values</h1>
+                            <img src="{% static 'images/heading_line.png' %}" alt="title">
+                            <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
+                        </div>
+
+                        <div class="sw_leads_accordian">
+                            <div class="panel-group" id="accordionFifteenLeft" role="tablist">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading desktop">
+                                        <h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftone" aria-expanded="true">The Cost Benefit Ratio: </a>
+										</h4>
+                                    </div>
+                                    <div id="collapseFifteenLeftone" class="panel-collapse collapse in" aria-expanded="true" role="tabpanel">
+                                        <div class="panel-body">
+
+                                            <div class="panel_cont">
+                                                <p>Akshay Handge dolor sit amet, consectetur adipisicing elido eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-default -->
+
+                                <!-- /.panel-default -->
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_abt_right_btm_wrapper">
+
+                        <div class="sw_left_heading_wraper">
+                            <h1>Our Mission</h1>
+                            <img src="{% static 'images/heading_line.png' %}" alt="title">
+                            <p>Consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea modo consequat. Duis aute irure dolor in reprehenderit.</p>
+                        </div>
+                        <div class="sw_left_heading_wraper">
+                            <h1>Our vision</h1>
+                            <img src="{% static 'images/heading_line.png' %}" alt="title">
+                            <p>Consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea modo consequat. Duis aute irure dolor in reprehenderit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sw leads section end-->
+    <!--sw best product wrapper start-->
+
+    <!--sw best product wrapper end-->
+    <!--sw newsletter wrapper start-->
+    <!--sw newsletter wrapper end-->
+    <!-- sw choose service wrapper start-->
+    <div class="sw_chose_service_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
+                    <div class="sw_left_heading_wraper sw_center_heading_wrapper">
+                        <h1>Our Focus Area</h1>
+                        <img src="{% static 'images/heading_line.png' %}" alt="title">
+                        <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                    <div class="chose_text_wrapper_left">
+                        <div class="chose_icon_wrapper_list">
+
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_1.png' %}" alt="title">
+                            </div>
+
+                            <div class="chose_icon_content_left">
+                                <h4><a href="#">Long Time to Use</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+
+                        </div>
+                        <div class="chose_icon_wrapper_list">
+
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_2.png' %}" alt="title">
+                            </div>
+
+                            <div class="chose_icon_content_left">
+                                <h4><a href="#">Alaways Clean Energy</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+
+                        </div>
+                        <div class="chose_icon_wrapper_list">
+
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_6.png' %}" alt="title">
+                            </div>
+
+                            <div class="chose_icon_content_left">
+                                <h4><a href="#">Energy Can Be Reused</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 hidden-sm hidden-xs">
+                    <div class="section2_img_wrapper">
+                        <img class="img-responsive" src="{% static 'images/cs_service.png' %}" alt="img">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 hidden-sm hidden-xs">
+                    <div class="chose_text_wrapper_right">
+                        <div class="chose_icon_wrapper_list">
+                            <div class="icon_content_right">
+                                <h4><a href="#">Used for Many Purposes</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_3.png' %}" alt="title">
+                            </div>
+
+                        </div>
+                        <div class="chose_icon_wrapper_list">
+
+                            <div class="icon_content_right">
+                                <h4><a href="#">Low Installation Costs</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_4.png' %}" alt="title">
+                            </div>
+
+                        </div>
+                        <div class="chose_icon_wrapper_list">
+
+                            <div class="icon_content_right">
+                                <h4><a href="#">Easy Installation</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_5.png' %}" alt="title">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 visible-sm visible-xs">
+                    <div class="chose_text_wrapper_right">
+                        <div class="chose_icon_wrapper_list">
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_3.png' %}" alt="title">
+                            </div>
+                            <div class="icon_content_right">
+                                <h4><a href="#">Used for Many Purposes</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="chose_icon_wrapper_list">
+
+                            <div class="chose_icon_img_list">
+                                <img src="{% static 'images/ser_img_4.png' %}" alt="title">
+                            </div>
+
+                            <div class="icon_content_right">
+                                <h4><a href="#">Low Installation Costs</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="chose_icon_wrapper_list">
+                            <div class="chose_icon_img_list">
+                                <img src="images/ser_img_5.png" alt="title">
+
+                            </div>
+                            <div class="icon_content_right">
+                                <h4><a href="#">Easy Installation</a></h4>
+                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 visible-sm visible-xs">
+                    <div class="section2_img_wrapper">
+                        <img class="img-responsive" src="{% static 'images/cs_service.png' %}" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sw choose service wrapper end-->
+    <!--sw our newsletter wrapper start-->
+
+    <!-- sw our newsletter section end-->
+    <!-- sw partners section start-->
+
+    <!-- sw partners section end-->
+    <!-- sw footer section start-->
+    <div class="sw_footer_main_wrapper">
+
+        <div class="circle_btm">
+            <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
+        </div>
+        <div class="footer_wrapper">
+
+          <div class="container">
+            <div class="circle_btm">
+                <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
+            </div>
+            <div class="row">
+                <div class="foter_padder">
+                    <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                        <div class="wrapper_second_about">
+                            <div class="wrapper_first_image">
+                      <a href="{% url 'home' %}"><img src="{% static 'images/214.png' %}" class="img-responsive" alt="logo" /></a>
+
+                            </div>
+                            <div class="abotus_content">
+
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
+                        <div class="wrapper_second_useful">
+                            <h4>useful links </h4>
+                            <img src="{% static 'images/heading_line3.png' %}" alt="title" class="pd_btm_3">
+                            <ul>
+                                <li><a href="{% url 'about' %}"><i class="fa fa-angle-right"></i>About</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>events </a>
+                                </li>
+                                <li><a href="{% url 'contact' %}"><i class="fa fa-angle-right"></i>contact </a>
+                                </li>
+                                <li><a href="{% url 'postList' %}"><i class="fa fa-angle-right"></i>news</a> </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4" style="visibility:hidden;">
+                        <div class="wrapper_second_useful wrapper_second_links">
+
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>sitemap</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>awards </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>tstimonials</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>career</a> </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                        <div class="wrapper_second_useful wrapper_second_useful_2">
+                            <h4>contact  us</h4>
+                            <img src="{% static 'images/heading_line3.png' %}" alt="title" class="pd_btm_3">
+                            <ul>
+                                <li>
+                                    <h1>+234 7003 8935</h1></li>
+                                <li><a href="#"><i class="flaticon-new-email-outline"></i>sales@idyllictechnologies.com</a>
+                                </li>
+<!--                                <li><a href="#"><i class="flaticon-internet"> www.idyllictechnologies.com</i></a>-->
+<!--                                </li>-->
+
+                                <li><i class="flaticon-placeholder"></i>7, Kudirat Abiola Way, Oregun Opposite Total Filling Station, Near Ojota Bus Stop
+                                </li>
+
+                                <li><i class="flaticon-placeholder"></i>2, Ogungbeye Street, Olowora Off Omole Phase 2, Lagos State.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <div class="section3_copyright">
+                    <p>Copyright 2022 <a href="index.html"> idyllic technologies</a>. all right reserved - design by <a href="">Tekbyte. </a></p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+    <!-- sw footer section end-->
+    <!--main js files-->
+
+    <script src="{% static 'js/jquery_min.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jqu_menu.js' %}"></script>
+    <script src="{% static 'js/jqu_slickmenu.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'venobox/js/venobox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.inview.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/camera.min.js' %}"></script>
+    <script src="{% static 'js/custom_2.js' %}"></script>
+    <!--js code-->
+</body>
+
+
+<!-- Mirrored from webstrot.com/html/typhoon/typhoon_html/about_us.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2022 18:01:15 GMT -->
+</html>

@@ -65,10 +65,15 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
 
+
       <ul class="nav navbar-nav navbar-right" >
-        <li><a href="{% url 'contact-us' %}" style="color:white;">Contact Us</a></li>
-          <li><a href="{% url 'home' %}" style="color:white;">About Us</a></li>
-          <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
+        <li><a href="{% url 'home' %}" title="" style="color:white;">Home</a>
+
+        </li>
+          <li><a href="{% url 'about' %}" style="color:white;">About</a></li>
+        <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
+          <li><a href="{% url 'contact' %}" style="color:white;">Contact</a></li>
+
       </ul>
     </div>
   </div>

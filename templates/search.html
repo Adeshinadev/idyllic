@@ -66,9 +66,12 @@
     <div class="collapse navbar-collapse" id="myNavbar">
 
       <ul class="nav navbar-nav navbar-right" >
-        <li><a href="{% url 'contact-us' %}" style="color:white;">Contact Us</a></li>
-          <li><a href="{% url 'home' %}" style="color:white;">About Us</a></li>
-          <li><a href="{% url 'home' %}" style="color:white;">Services</a></li>
+        <li><a href="{% url 'home' %}" title="" style="color:white;">Home</a>
+
+        </li>
+        <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
+          <li><a href="{% url 'contact' %}" style="color:white;">Contact</a></li>
+          <li><a href="{% url 'about' %}" style="color:white;">About</a></li>
       </ul>
     </div>
   </div>
@@ -655,27 +658,25 @@ track for what.</a></h5>
                                 <h4>useful links </h4>
                                 <img src="{% static 'images/hd_line_dark.png' %}" alt="title" class="pd_btm_3">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>About us</a>
+                                    <li><a href="{% url 'about' %}"><i class="fa fa-angle-right"></i>About </a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>events </a>
+
+                                    <li><a href="{% url 'contact' %}"><i class="fa fa-angle-right"></i>contact </a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>contact </a>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>history</a>
-                                    </li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>news</a> </li>
+                                    <li><a href="{% url 'postList' %}"><i class="fa fa-angle-right"></i>news</a> </li>
                                 </ul>
 
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
-                            <div class="wrapper_second_useful wrapper_second_links">
+                            <div class="wrapper_second_useful wrapper_second_links" style="visibility:hidden;">
 
                                 <ul>
                                     <li><a href="#"><i class="fa fa-angle-right"></i>sitemap</a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-angle-right"></i>FAQ </a>
-                                    </li>
+
                                     <li><a href="#"><i class="fa fa-angle-right"></i>awards </a>
                                     </li>
                                     <li><a href="#"><i class="fa fa-angle-right"></i>tstimonials</a>
@@ -685,7 +686,6 @@ track for what.</a></h5>
 
                             </div>
                         </div>
-
 
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
                             <div class="wrapper_second_useful wrapper_second_useful_2">
