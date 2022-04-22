@@ -13,7 +13,8 @@ def home(request):
 
 
 def contact_us(request):
-    return render(request, 'contact_us.html')
+    categories = Categorie.objects.all()
+    return render(request, 'contact_us.html', {'categories': categories})
 
 
 def about_us(request):
