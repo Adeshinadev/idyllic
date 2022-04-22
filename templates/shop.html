@@ -68,7 +68,7 @@
       <ul class="nav navbar-nav navbar-right" >
         <li><a href="{% url 'contact-us' %}" style="color:white;">Contact Us</a></li>
           <li><a href="{% url 'home' %}" style="color:white;">About Us</a></li>
-          <li><a href="{% url 'home' %}" style="color:white;">Services</a></li>
+          <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
       </ul>
     </div>
   </div>
@@ -578,71 +578,8 @@
                         </div>
                     </div>
 
-                    <div class="sidebar_widget">
-                        <h4>popular products</h4>
-                        <img src="images/heading_line.png" alt="title">
-                        <div class="latest_post_wrapper">
-                            <div class="blog_wrapper1">
-                                <div class="sc_blog_image">
-                                    <img src="{% static 'images/blog_1.png' %}" class="img-responsive" alt="blog_img1" />
-                                </div>
-                                <div class="sc_blog_text">
-                                    <h5><a href="#">Electricity is on
-track for what.</a></h5>
-                                    <div class="sc_blog_date">June 28, 2018</div>
-                                </div>
-                            </div>
-                            <div class="blog_wrapper2">
-                                <div class="sc_blog_image">
-                                    <img src="{% static 'images/blog_2.png' %}" class="img-responsive" alt="blog_img2" />
-                                </div>
-                                <div class="sc_blog_text">
-                                    <h5><a href="#">Electricity is on
-track for what.</a></h5>
-                                    <div class="sc_blog_date">June 28, 2018</div>
-                                </div>
-                            </div>
-                            <div class="blog_wrapper3">
-                                <div class="sc_blog_image">
-                                    <img src="{% static 'images/blog_3.png' %}" class="img-responsive" alt="blog_img3" />
-                                </div>
-                                <div class="sc_blog_text">
-                                    <h5><a href="#">Electricity is on
-track for what.</a></h5>
-                                    <div class="sc_blog_date">June 28, 2018</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="sidebar_widget">
-                        <h4>tags</h4>
-                        <img src="{% static 'images/heading_line.png' %}" alt="title">
-                        <div class="archives_wrapper">
-                            <div class="gc_blog_cloud_side_menu">
 
-                                <ul>
-                                    <li><a href="#">sun</a>
-                                    </li>
-                                    <li><a href="#">ecosystem</a>
-                                    </li>
-                                    <li><a href="#">wind</a>
-                                    </li>
-                                    <li><a href="#">power</a>
-                                    </li>
-                                    <li><a href="#">energy</a>
-                                    </li>
-                                    <li><a href="#">solar</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slidebar_add_img">
-                        <a href="#">
-                            <img src="{% static 'images/add.png' %}" alt="img" class="img-responsive">
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -669,7 +606,7 @@ track for what.</a></h5>
                                     <a href="{% url 'home' %}"><img src="{% static 'images/214.png' %}" class="img-responsive" alt="logo" /></a>
                                 </div>
                                 <div class="abotus_content">
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aks nostrud exercitation ullamco.</p>
+                                    
                                     <ul>
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -700,7 +637,7 @@ track for what.</a></h5>
 
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
+                        <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4"  style="visibility:hidden;">
                             <div class="wrapper_second_useful wrapper_second_links">
 
                                 <ul>

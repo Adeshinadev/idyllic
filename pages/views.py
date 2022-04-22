@@ -18,7 +18,7 @@ def store(request):
     categories = Categorie.objects.all()
     product_obj = Product.objects.all()
     page = request.GET.get('page', 1)
-    paginator = Paginator(product_obj, 1)
+    paginator = Paginator(product_obj, 10)
     print(paginator)
     try:
         products = paginator.page(page)
