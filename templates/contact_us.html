@@ -190,6 +190,7 @@ header .overlay {
                             <div class="count-description">
                                 <h5 class="con2">Email Us:</h5>
                                 <h5 class="con2">info@idyllictechnologies.com</h5>
+                                <h5 class="con2">sales@idyllictechnologies.com</h5>
 <!--                                 <span class="timer">845</span>+-->
 
 
@@ -202,11 +203,11 @@ header .overlay {
                             <div class="icon"> <a href="#"><i class="flaticon-phone-contact"><img src="{% static 'images/phone-call.png' %}"></i></a>
                             </div>
                             <div class="count-description">
-                                <h5 class="con2">Get in touch with us:</h5>
+                                <h5 class="con2">Let us talk:</h5>
 
                                 <h5 class="con2">07037973666 </h5>
                                 <h5 class="con2">  08034143222</h5>
-                                <h5 class="con2">09094891783</h5>
+
 
                             </div>
                         </div>
@@ -234,7 +235,7 @@ header .overlay {
                         <form method='post' action="{% url 'contact-submit' %}" >
                             {% csrf_token %}
                             <div class="sw_left_heading_wraper">
-                                <h1>Fill Free Contact Us</h1>
+                                <h1>Get in touch with us</h1>
 
                                 {% for message in messages %}
                                     <div class="alert alert-success">
