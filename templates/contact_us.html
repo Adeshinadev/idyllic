@@ -60,8 +60,16 @@
         <li><a href="{% url 'home' %}" title="" style="color:white;">Home</a>
 
         </li>
+           <li><a href="{% url 'about' %}" style="color:white;">About</a></li>
+          <li><a href=" " title="" style="color:white;">Products</a>
+            <ul>
+                {% for category in categories %}
+                <li class="dropdown_hover"><a href="{% url 'store' id=category.id %}" title="">{{category.name}}</a></li>
+               {% endfor %}
+            </ul>
+        </li>
         <li><a href="{% url 'postList' %}" style="color:white;">Blog</a></li>
-          <li><a href="{% url 'about' %}" style="color:white;">About</a></li>
+
       </ul>
     </div>
   </div>
@@ -153,7 +161,7 @@
     <!--contact wrapper end-->
 
     <!-- sw footer section start-->
-   
+
     <!-- sw footer section end-->
     <!--main js files-->
 <script>
