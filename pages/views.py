@@ -18,7 +18,7 @@ def contact_us(request):
 
 def about_us(request):
     categories = Categorie.objects.all()
-    return render(request, 'about.html', {'categories': categories})
+    return render(request, 'About.html', {'categories': categories})
 
 
 def store(request):
