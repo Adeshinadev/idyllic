@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ndoga-!s*i$w=x)(7xf@+t@qel=m@q0unzcgk$!hb8mmn+bx^b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['idyllic.herokuapp.com']
+ALLOWED_HOSTS = ['www.idyllictechnologies.com', 'idyllictechnologies.com']
 
 # Application definition
 

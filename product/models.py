@@ -18,7 +18,6 @@ class Sub_categorie(models.Model):
     stock = models.IntegerField(default=10)
     optional_description = models.TextField(null=True, blank=True)
 
-
     def __str__(self):
         return f'{self.name}, {self.category.name}'
 
