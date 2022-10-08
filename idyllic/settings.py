@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ndoga-!s*i$w=x)(7xf@+t@qel=m@q0unzcgk$!hb8mmn+bx^b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.idyllictechnologies.com', 'idyllictechnologies.com']
+ALLOWED_HOSTS = ['www.idyllictechnologies.com', 'idyllictechnologies.com', '192.168.1.101']
 
 # Application definition
 

@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="  	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url({% static 'images/banner4.jpg' %});
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" style="background-color:black;">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="{% static 'images/part5.png' %}" style="background-color:#0a0a3c;" width="60px" height="60px;"> </a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
+      <a href="{% url 'about' %}" class="w3-bar-item w3-button">About</a>
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="{% url 'about' %}" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">We make what matters work.*</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large">Developing more efficient, sustainable power management solutions that meet the ever-changing needs of our world</span>
+    <p><a href="https://www.eaton.com/ng/en-gb/company/news-insights/what-matters.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">See how</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+
+  </div>
+</header>
+
+<!-- About Section -->
+
+<!-- Promo Section - "We know design" -->
+
+
+<!-- Team Section -->
+
+
+<!-- Promo Section "Statistics" -->
+
+
+<!-- Work Section -->
+
+
+<!-- Modal for full size images on click-->
+
+
+<!-- Skills Section -->
+
+
+<!-- Pricing Section -->
+<!--<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px; background-color:white;" id="pricing">-->
+<!--  <h3 style="color:black;"><b>PRODUCTS</b></h3>-->
+<!--&lt;!&ndash;  <p class="w3-large" style="color:black;">Choose a pricing plan that fits your needs.</p>&ndash;&gt;-->
+<!--  <div class="w3-row-padding" style="margin-top:64px; " >-->
+<!--    <div class="w3-third w3-section">-->
+<!--      <ul class="w3-ul w3-white w3-hover-shadow">-->
+<!--       <img src="{% static 'images/eaton1.jpeg' %}" height="200px">-->
+
+<!--        <li class="w3-padding-16">-->
+<!--          <h2 class="w3-wide">UPS</h2>-->
+
+<!--        </li>-->
+<!--        <li class="w3-light-grey w3-padding-24">-->
+<!--          <a href="contact" class="w3-button w3-black w3-padding-large"> Buy Now </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--    <div class="w3-third">-->
+<!--     <ul class="w3-ul w3-white w3-hover-shadow">-->
+<!--       <img src="{% static 'images/socket.jpeg' %}" height="200px">-->
+
+<!--        <li class="w3-padding-16">-->
+<!--          <h2 class="w3-wide">SOCKET</h2>-->
+
+<!--        </li>-->
+<!--           <li class="w3-padding-16">-->
+<!--          <h2 class="w3-wide">dcjbjdbj</h2>-->
+
+<!--        </li>-->
+<!--        <li class="w3-light-grey w3-padding-24">-->
+<!--          <a href="contact" class="w3-button w3-black w3-padding-large"> Buy Now </a>-->
+<!--        </li>-->
+
+<!--      </ul>-->
+<!--    </div>-->
+<!--    <div class="w3-third w3-section">-->
+<!--     <ul class="w3-ul w3-white w3-hover-shadow">-->
+<!--       <img src="{% static 'images/dist.jpeg' %}" height="200px">-->
+
+<!--        <li class="w3-padding-16">-->
+<!--          <h2 class="w3-wide">Distribution board </h2>-->
+
+<!--        </li>-->
+<!--        <li class="w3-light-grey w3-padding-24">-->
+<!--          <a href="contact" class="w3-button w3-black w3-padding-large"> Buy Now </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!-- Contact Section -->
+<div class="w3-container" style="background-color:#005eb8; color:white;">
+<h1 >Products</h1>
+</div>
+
+<div class="w3-content">
+
+<div class="w3-row w3-margin">
+
+<div class="w3-third">
+  <img src="{% static 'images/socket.jpeg' %}" style="width:100%;min-height:200px">
+</div>
+<div class="w3-twothird w3-container">
+  <h2>Socket</h2>
+  <p>
+ Eaton’s wiring accessory ranges offer limitless choice. No matter the look, feel, function or feature – Eaton wiring accessories are flexible enough to suit every requirement. The ranges have been created to be elegant, using a clean design and established materials to deliver a modern aesthetic appearance. The decision to switch on to Eaton is simple.
+  </p>
+   <a href="{% url 'contact' %}" type="button" class="btn btn-primary" target="_blank">More inquiries</a>
+</div>
+
+</div>
+<div class="w3-row w3-margin">
+
+<div class="w3-third">
+  <img  src="{% static 'images/dist.jpeg' %}" style="width:100%;min-height:200px">
+</div>
+<div class="w3-twothird w3-container">
+  <h2>Distribution board</h2>
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+   <a href="{% url 'contact' %}" type="button" class="btn btn-primary" target="_blank">More inquiries</a>
+</div>
+
+</div>
+<div class="w3-row w3-margin">
+
+<div class="w3-third">
+  <img  src="{% static 'images/eaton3.jpeg' %}" style="width:100%;min-height:200px">
+</div>
+<div class="w3-twothird w3-container">
+  <h2>UPS</h2>
+  <p>
+Eaton is a leading provider of backup power UPS, or uninterruptible power supply. Eaton UPSs deliver high quality, reliable backup power for everything from network closets and server rooms to enterprise and colocation data centers.
+  </p>
+  <a href="{% url 'contact' %}" type="button" class="btn btn-primary" target="_blank">More inquiries</a>
+</div>
+
+</div>
+
+
+
+</div>
+
+<!-- Footer -->
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

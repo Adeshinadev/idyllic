@@ -58,3 +58,11 @@ def sub_store_sub_product(request, id):
 
 def handle_not_found(request, exception):
     return render(request, 'error.html')
+
+
+def eaton(request):
+    return render(request, 'eaton.html')
+
+
+def fullriver(request):
+    return render(request, 'fullriver.html')
